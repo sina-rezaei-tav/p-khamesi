@@ -1,4 +1,4 @@
-import { $, el, rtl, t } from "./shared.js";
+import { $, rtl, t } from "./shared.js";
 const NS = "http://www.w3.org/2000/svg";
 const xy = (radius, angle) => {
   const radians = angle * Math.PI / 180;
@@ -26,7 +26,13 @@ export function setupWheel(pieces) {
   });
   svg.addEventListener("keydown", (event) => {
     const index = links.indexOf(document.activeElement);
-    if (index < 0 || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    if (index < 0) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      location.hash = links[index].getAttribute("href");
+      return;
+    }
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
     event.preventDefault();
     const step = (event.key === "ArrowRight" ? 1 : -1) * (rtl() ? -1 : 1);
     links[(index + step + links.length) % links.length].focus();

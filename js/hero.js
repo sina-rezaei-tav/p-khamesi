@@ -4,7 +4,8 @@ export function setupHero() {
   const clock = $(".clock");
   const art = $(".entrance-art");
   const time = $("#opening-time");
-  clock.hidden = time.parentElement.hidden = false;
+  clock.hidden = false;
+  time.parentElement.removeAttribute("aria-hidden");
   const formatter = new Intl.DateTimeFormat(language(), { hour: "numeric", minute: "2-digit" });
   const hands = ["hour", "minute", "second"].map((key) => $(`#clock-${key}`));
   let lastMinute = -1;
@@ -62,10 +63,12 @@ export function setupHero() {
   window.addEventListener("pointermove", onFrame(activity), { passive: true });
   window.addEventListener("keydown", activity);
   activity();
-  art.addEventListener("pointermove", onFrame((event) => {
+  const light = onFrame((event) => {
     if (document.documentElement.dataset.theme !== "dark") return;
     const rect = art.getBoundingClientRect();
     art.style.setProperty("--beam-x", `${(event.clientX - rect.left - rect.width / 2) * .33}px`);
     art.style.setProperty("--beam-y", `${(event.clientY - rect.top - rect.height / 2) * .25}px`);
-  }), { passive: true });
+  });
+  art.addEventListener("pointermove", light, { passive: true });
+  art.addEventListener("pointerdown", light, { passive: true });
 }

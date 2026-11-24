@@ -21,7 +21,9 @@ export function setupArchive(content) {
     visual.textContent = t("archiveCount", values);
     if (announceChange) announce.textContent = t("archiveAnnouncement", values);
   }
+  let dragging = false;
   const reset = () => {
+    dragging = false;
     top.style.removeProperty("--x");
     top.style.removeProperty("--y");
   };
@@ -44,8 +46,8 @@ export function setupArchive(content) {
     index = (index + step + order.length) % order.length;
     render();
   }
-  swipe(top, change, undefined, onFrame((x, y) => {
-    if (reduced.matches) return;
+  swipe(top, change, () => { dragging = true; }, onFrame((x, y) => {
+    if (!dragging || reduced.matches) return;
     top.style.setProperty("--x", `${x}px`);
     top.style.setProperty("--y", `${y * .45}px`);
   }), reset);

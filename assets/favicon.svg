@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#7a2e3a"/>
-  <circle cx="32" cy="32" r="22" fill="none" stroke="#f7f3ec" stroke-width="1"/>
-  <text x="32" y="44" text-anchor="middle" fill="#f7f3ec" font-family="Georgia,serif" font-size="35">D</text>
+  <circle cx="32" cy="32" r="29" fill="#f1e9dc" stroke="#2a1d17" stroke-width="2"/>
+  <g stroke="#f1e9dc" stroke-width="1.6">
+  <path fill="#a45264" d="M16.72 10.97A26 26 0 0 1 47.28 10.97L37.29 24.72A9 9 0 0 0 26.71 24.72Z"/>
+  <path fill="#6e8fb0" d="M47.28 10.97A26 26 0 0 1 56.73 40.03L40.56 34.78A9 9 0 0 0 37.29 24.72Z"/>
+  <path fill="#d9a441" d="M56.73 40.03A26 26 0 0 1 32.00 58.00L32.00 41.00A9 9 0 0 0 40.56 34.78Z"/>
+  <path fill="#6f8f6a" d="M32.00 58.00A26 26 0 0 1 7.27 40.03L23.44 34.78A9 9 0 0 0 32.00 41.00Z"/>
+  <path fill="#71636e" d="M7.27 40.03A26 26 0 0 1 16.72 10.97L26.71 24.72A9 9 0 0 0 23.44 34.78Z"/>
+  </g>
+  <circle cx="32" cy="32" r="2" fill="#2a1d17"/>
 </svg>

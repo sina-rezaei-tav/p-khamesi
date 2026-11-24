@@ -1,7 +1,10 @@
 const key = "dayereh-theme";
 const system = matchMedia("(prefers-color-scheme: dark)");
 let choice;
-try { choice = localStorage.getItem(key); } catch {}
+try {
+  const stored = localStorage.getItem(key);
+  if (stored === "light" || stored === "dark") choice = stored;
+} catch {}
 export const theme = () => choice || (system.matches ? "dark" : "light");
 function apply() {
   document.documentElement.dataset.theme = theme();

@@ -23,7 +23,7 @@ export function extras(content, lang) {
       </div>
       <div class="pair-print">
         <div class="pair-photo">${paint(pair.photo, "(min-width: 740px) 44vw, 86vw")}
-        ${captions.map((item, index) => `<button class="pin" type="button" data-pin="${index}" style="--pin-x:${escape(item.point[0])}%;--pin-y:${escape(item.point[1])}%" aria-label="${escape(item.title)}" aria-controls="pair-caption" aria-pressed="false" hidden>${index + 1}</button>`).join("")}</div>
+        ${captions.map((item, index) => `<button class="pin" type="button" data-pin="${index}" style="--pin-x:${escape(item.point[0])}%;--pin-y:${escape(item.point[1])}%" aria-label="${index + 1} · ${escape(item.title)}" aria-controls="pair-caption" aria-pressed="false" hidden>${index + 1}</button>`).join("")}</div>
       </div>
     </div></section>
     <section class="archive" id="archive" aria-labelledby="archive-title"><div class="wrap archive-layout">
@@ -38,7 +38,7 @@ export function extras(content, lang) {
     <section class="gift" id="contact" aria-labelledby="gift-title"><div class="wrap gift-layout">
       <div class="section-heading"><h2 id="gift-title">${f("gift")}</h2><p>${f("giftIntro")}</p>
       ${steps.length ? `<ol>${steps.map((step) => `<li>${escape(step)}</li>`).join("")}</ol>` : ""}</div>
-      <div class="ticket"><div class="ticket-stub"><p>${f("admit")}</p><span aria-hidden="true">✳</span></div>
+      <div class="ticket"><div class="ticket-stub"><p>${f("admit")}</p><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0v16M0 8h16M2 2l12 12M2 14 14 2"/></svg></div>
       <div class="ticket-body"><p class="eyebrow">${f("ticketTitle")}</p>
       ${email ? `<a class="button primary" id="ticket-email" href="mailto:${escape(email)}">${f("email")}</a>
         <form id="ticket-form" action="mailto:${escape(email)}" hidden>

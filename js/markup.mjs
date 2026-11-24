@@ -12,7 +12,7 @@ export function fingerprint(content) {
   return hash.toString(36);
 }
 
-export function photo(content, id, { sizes = "(min-width: 900px) 480px, 85vw", eager = false, alt, lang = "en" } = {}) {
+export function photo(content, id, { sizes = "(min-width: 1200px) 430px, (min-width: 740px) 34vw, 66vw", eager = false, alt, lang = "en" } = {}) {
   const [width, height, fallback] = content.photos[id];
   const widths = [...new Set([480, 960, 1600].map((size) => Math.min(size, width)))];
   const path = (size, format) => `assets/img/photo-${id}-${size}.${format}`;
@@ -52,9 +52,11 @@ export function museum(content, lang, extras = "") {
   const nav = pieces.map((piece) => `<li><a href="#room-${escape(piece.id)}"><i style="--swatch:${escape(piece.swatch)}"></i><span class="nav-number">${escape(piece.catalogue)}</span><span>${escape(piece.title)}</span></a></li>`).join("");
   const colours = (piece) => [...piece.day, ...piece.night].map((value, index) =>
     `--${["day-room", "day-ink", "day-accent", "night-room", "night-ink", "night-accent"][index]}:${escape(value)}`).join(";");
-  const rooms = pieces.map((piece) => {
+  const rooms = pieces.map((piece, index) => {
     const id = escape(piece.id);
-    return `<section class="room" id="room-${id}" style="${colours(piece)}" aria-labelledby="title-${id}">
+    const previous = pieces[index - 1];
+    const edge = previous ? `;--day-edge:${escape(previous.day[0])};--night-edge:${escape(previous.night[0])}` : "";
+    return `<section class="room" id="room-${id}" style="${colours(piece)}${edge}" aria-labelledby="title-${id}">
       <div class="wrap room-layout">
         <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
           <div class="room-frame">${photo(content, piece.cover, { lang })}</div>
@@ -90,10 +92,11 @@ export function museum(content, lang, extras = "") {
         <div class="entrance-copy">
           <p class="eyebrow mast"><i aria-hidden="true"></i>${f("museum")}</p>
           <h1 id="entrance-title">${escape(brand)}</h1>
+          <i class="title-under" aria-hidden="true"><svg viewBox="0 0 100 10" preserveAspectRatio="none"><path pathLength="1" d="M1 6Q36-1 98 4M19 8Q52 3 83 7"/></svg></i>
           <p class="hero-by">${f("heroBy", { name })}</p>
           <p class="hero-line">${escape(translated.tagline || content.tagline || t("heroLine"))}</p>
           <a class="button primary" data-magnet href="#work">${f("enter")}<span aria-hidden="true">↓</span></a>
-          <p class="hours" hidden><span>${f("opening")}</span><time id="opening-time"></time></p>
+          <p class="hours" aria-hidden="true"><span>${f("opening")}</span><time id="opening-time"></time></p>
         </div>
         <div class="entrance-art">
           <i class="entrance-arch" aria-hidden="true"></i>

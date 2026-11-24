@@ -31,6 +31,7 @@ export function openDoors() {
   skip.addEventListener("click", finish, { once: true });
   doors.addEventListener("keydown", (event) => { if (event.key === "Escape") finish(); });
   const loaded = () => {
+    if (done) return;
     $("#door-progress").textContent = `${t("hang")} 100%`;
     setTimeout(finish, 100);
   };

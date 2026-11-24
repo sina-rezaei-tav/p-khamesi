@@ -100,21 +100,21 @@ window.portfolioContent = {
     return { photo, caption };
   });
   museum.loupes = [
-    { photo: 24, caption: "Sunflowers", point: [38, 52] },
-    { photo: 31, caption: "Starry Night", point: [52, 12] },
-    { photo: 22, caption: "Van Gogh self-portrait", point: [37, 49] }
+    { photo: 24, caption: "Sunflowers", point: [43, 58] },
+    { photo: 31, caption: "Starry Night", point: [50, 11] },
+    { photo: 22, caption: "Van Gogh self-portrait", point: [40, 40] }
   ];
   museum.pair = {
     photo: 22,
     hotspots: [
-      { point: [37, 48], title: "Van Gogh self-portrait", caption: "Held by the Frida-inspired figure." },
-      { point: [66, 42], title: "Sunflowers", caption: "Held by the Van Gogh-inspired figure." }
+      { point: [40, 40], title: "Van Gogh self-portrait", caption: "Held by the Frida-inspired figure." },
+      { point: [58, 36], title: "Sunflowers", caption: "Held by the Van Gogh-inspired figure." }
     ]
   };
   Object.assign(museum.strings.en, {
     museum: "The Tiny Museum of Tiny Masters",
     heroLine: "Famous artists, small enough for a desk.",
-    heroBy: "Figurines by {name}", navWork: "Rooms", navContact: "Gift shop",
+    heroBy: "by {name}", navWork: "Rooms", navContact: "Gift shop",
     enter: "Enter the museum", shopLink: "Visit the gift shop", opening: "Opening hours · Your local time",
     hang: "Hanging the exhibits", skipDoors: "Skip the doors", timeButton: "A very soft clock",
     roomMap: "Room map", roomIndex: "Museum directory", roomCount: "Room {current} / {total}",
@@ -140,4 +140,3 @@ window.portfolioContent = {
     roomArrow: "↓", folio: "Museum catalogue", handMade: "Hand-sculpted & hand-painted"
   });
 }
-window.portfolioContent.strings.en.heroBy = "by {name}";
