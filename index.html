@@ -16,95 +16,195 @@
   <meta name="twitter:description" content="Explore hand-sculpted, hand-painted desk figurines by Panah Khamesi.">
   <meta name="twitter:image" content="assets/img/social.jpg">
   <meta name="twitter:image:alt" content="Dalí-inspired figure holding a melting clock">
-  <meta name="theme-color" content="#f7f3ec">
+  <meta name="theme-color" content="#f1e9dc">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,SOFT,WONK,wght@0,9..144,0..100,0..1,400..700;1,9..144,0..100,0..1,400..700&family=Instrument+Sans:wght@400..700&family=Vazirmatn:wght@400..700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script id="artist-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Panah Khamesi"}</script>
   <script defer src="content.js"></script>
-  <script defer src="script.js"></script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main" data-copy="skip">Skip to content</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#top"><span data-brand>Dayereh Rangi</span><small data-by>by Panah Khamesi</small></a>
-      <nav aria-label="Main navigation" data-label="nav">
-        <a href="#work" data-copy="navWork">Work</a>
-        <a href="#about" data-copy="navAbout">About</a>
-        <a class="nav-contact" href="#contact" data-copy="navContact">Contact</a>
-        <button id="locale" type="button" hidden></button>
-      </nav>
-    </div>
-  </header>
-  <main id="main" tabindex="-1">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow" data-copy="medium">Hand-sculpted · Hand-painted</p>
-        <h1 id="hero-title" data-brand>Dayereh Rangi</h1>
-        <p class="hero-by" data-by>by Panah Khamesi</p>
-        <p class="hero-intro" id="tagline" hidden></p>
-        <div class="actions">
-          <a class="button primary" href="#work" data-copy="view">View the work</a>
-          <a class="button secondary" href="#contact" data-copy="commission">Commission a piece</a>
+<div class="museum" data-version="u77nl5">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="masthead"><div class="wrap header-inner">
+      <a class="brand" href="#entrance"><i aria-hidden="true"></i><span><strong>Dayereh Rangi</strong><small>by Panah Khamesi</small></span></a>
+      <nav class="top-nav" aria-label="Main navigation"><a href="#work">Rooms</a><a href="#contact">Gift shop</a></nav>
+      <button class="lighting" id="theme" type="button" hidden></button>
+    </div></header>
+    <main id="main" tabindex="-1">
+      <section class="entrance wrap" id="entrance" aria-labelledby="entrance-title">
+        <div class="entrance-copy">
+          <p class="eyebrow mast"><i aria-hidden="true"></i>The Tiny Museum of Tiny Masters</p>
+          <h1 id="entrance-title">Dayereh Rangi</h1>
+          <p class="hero-by">by Panah Khamesi</p>
+          <p class="hero-line">Famous artists, small enough for a desk.</p>
+          <a class="button primary" data-magnet href="#work">Enter the museum<span aria-hidden="true">↓</span></a>
+          <p class="hours" hidden><span>Opening hours · Your local time</span><time id="opening-time"></time></p>
+        </div>
+        <div class="entrance-art">
+          <i class="entrance-arch" aria-hidden="true"></i>
+          <figure class="hero-portrait"><picture><source type="image/webp" srcset="assets/img/photo-3-480.webp 480w, assets/img/photo-3-853.webp 853w" sizes="(min-width: 1100px) 390px, (min-width: 740px) 36vw, 67vw">
+    <img src="assets/img/photo-3-480.jpg" srcset="assets/img/photo-3-480.jpg 480w, assets/img/photo-3-853.jpg 853w" sizes="(min-width: 1100px) 390px, (min-width: 740px) 36vw, 67vw" width="853" height="1280"
+      alt="Front view of a Dalí-inspired figurine holding a melting clock, in a burgundy striped jacket and leopard-print shorts" fetchpriority="high" draggable="false"></picture><figcaption><span>Cat. 01</span>The melting clock</figcaption></figure>
+          <button type="button" class="clock" aria-label="A very soft clock" title="A very soft clock" hidden><svg id="clock-art" viewBox="0 0 200 220" aria-hidden="true">
+  <g id="clock-melt"><path class="clock-outline" d="M102 15c50-3 76 36 73 61-3 29-36 36-34 66 1 30-7 62-27 60-25-3-11-54-43-61C25 131 14 106 21 72 28 40 59 17 102 15Z"/>
+  <path class="clock-inset" d="M101 23c45-3 70 31 65 56-5 26-32 33-33 62-1 24-5 49-18 50-18 1-10-49-39-58-41-13-55-30-47-60 8-28 36-47 72-50Z"/>
+  <g class="clock-ticks"><path d="M96 33v10m45 6-5 8m18 26-10 1m-8 27-7-5m-29 27-1-10m-38-10 6-8m-28-19 10-2m8-29 7 7"/></g>
+  <path id="clock-hour" class="hand" d="M96 83V55"/><path id="clock-minute" class="hand" d="M96 83V44"/><path id="clock-second" d="M96 88V41"/><circle cx="96" cy="83" r="4"/></g>
+</svg></button>
+        </div>
+      </section>
+      <nav id="work" class="directory wrap" aria-label="Museum directory"><p class="eyebrow">Museum directory</p><ol><li><a href="#room-melting-clock"><i style="--swatch:#a45264"></i><span class="nav-number">01</span><span>The melting clock</span></a></li><li><a href="#room-starry-night"><i style="--swatch:#6e8fb0"></i><span class="nav-number">02</span><span>Starry Night</span></a></li><li><a href="#room-sunflowers"><i style="--swatch:#d9a441"></i><span class="nav-number">03</span><span>Sunflowers</span></a></li><li><a href="#room-flower-crown"><i style="--swatch:#6f8f6a"></i><span class="nav-number">04</span><span>The flower crown</span></a></li><li><a href="#room-tuxedo-bust"><i style="--swatch:#71636e"></i><span class="nav-number">05</span><span>Tuxedo bust</span></a></li></ol></nav>
+      <div class="collection"><section class="room" id="room-melting-clock" style="--day-room:#e8cdd0;--day-ink:#34201e;--day-accent:#7a2e3a;--night-room:#332127;--night-ink:#f7e7dd;--night-accent:#e6aeb9" aria-labelledby="title-melting-clock">
+      <div class="wrap room-layout">
+        <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
+          <div class="room-frame"><picture><source type="image/webp" srcset="assets/img/photo-5-480.webp 480w, assets/img/photo-5-853.webp 853w" sizes="(min-width: 900px) 480px, 85vw">
+    <img src="assets/img/photo-5-480.jpg" srcset="assets/img/photo-5-480.jpg 480w, assets/img/photo-5-853.jpg 853w" sizes="(min-width: 900px) 480px, 85vw" width="853" height="1280"
+      alt="Three-quarter view of the melting-clock figure in a burgundy jacket, leopard-print shorts and blue boots on a dark base" loading="lazy" decoding="async" draggable="false"></picture></div>
+        </div></div>
+        <div class="wall">
+          <p class="eyebrow room-kicker"><span>Room 01</span><span>Cat. 01</span></p>
+          <h2 id="title-melting-clock">The melting clock</h2>
+          <p class="annotation"><svg viewBox="0 0 72 30" aria-hidden="true"><path pathLength="1" d="M2 24Q30 32 67 5M51 7l17-4-8 16"/></svg><span>Time has gone rather soft.</span></p>
+          
+          
+          <a class="button room-enter" data-exhibit="melting-clock" data-cursor="viewCursor" href="#exhibit-melting-clock">Enter the exhibit <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <figure class="hero-frame">
-        <picture>
-          <source type="image/webp" srcset="assets/img/photo-3-480.webp 480w, assets/img/photo-3-853.webp 853w" sizes="(min-width: 1280px) 522px, (min-width: 700px) 43vw, 92vw">
-          <img src="assets/img/photo-3-480.jpg" srcset="assets/img/photo-3-480.jpg 480w, assets/img/photo-3-853.jpg 853w" sizes="(min-width: 1280px) 522px, (min-width: 700px) 43vw, 92vw" width="853" height="1280" fetchpriority="high" alt="Front view of a Dalí-inspired figurine holding a melting clock, in a burgundy striped jacket and leopard-print shorts">
-        </picture>
-        <figcaption data-copy="heroCaption">The melting clock</figcaption>
-      </figure>
-    </section>
-    <section class="work-section" id="work" aria-labelledby="work-title">
-      <div class="shell">
-        <div class="section-head">
-          <h2 id="work-title" data-copy="work">Selected Work</h2>
-          <p data-copy="workIntro">Famous artists reimagined as everyday people, with tiny painted canvases and a few playful details.</p>
-        </div>
-        <div class="gallery" id="gallery"></div>
-        <div class="other-work"><h3 data-copy="other">Other work</h3><div id="other"></div></div>
+      <div class="wrap room-views" id="exhibit-melting-clock">
+        <details open><summary>All exhibit photographs</summary>
+          <div class="static-photos"><figure><picture><source type="image/webp" srcset="assets/img/photo-5-480.webp 480w, assets/img/photo-5-853.webp 853w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-5-480.jpg" srcset="assets/img/photo-5-480.jpg 480w, assets/img/photo-5-853.jpg 853w" sizes="(min-width: 900px) 230px, 44vw" width="853" height="1280"
+      alt="Three-quarter view of the melting-clock figure in a burgundy jacket, leopard-print shorts and blue boots on a dark base" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Three-quarter</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-3-480.webp 480w, assets/img/photo-3-853.webp 853w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-3-480.jpg" srcset="assets/img/photo-3-480.jpg 480w, assets/img/photo-3-853.jpg 853w" sizes="(min-width: 900px) 230px, 44vw" width="853" height="1280"
+      alt="Front view of a Dalí-inspired figurine holding a melting clock, in a burgundy striped jacket and leopard-print shorts" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Front</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-2-480.webp 480w, assets/img/photo-2-853.webp 853w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-2-480.jpg" srcset="assets/img/photo-2-480.jpg 480w, assets/img/photo-2-853.jpg 853w" sizes="(min-width: 900px) 230px, 44vw" width="853" height="1280"
+      alt="Back of the melting-clock figure showing its burgundy striped jacket, leopard-print shorts and dark round base" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Back</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-4-480.webp 480w, assets/img/photo-4-853.webp 853w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-4-480.jpg" srcset="assets/img/photo-4-480.jpg 480w, assets/img/photo-4-853.jpg 853w" sizes="(min-width: 900px) 230px, 44vw" width="853" height="1280"
+      alt="Close-up of a Dalí-inspired figure with a melting clock tucked against its burgundy jacket and green waistcoat" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Detail</figcaption></figure></div>
+        </details>
       </div>
-    </section>
-    <section class="craft-section shell" id="craft" aria-labelledby="craft-title">
-      <div class="section-head">
-        <h2 id="craft-title" data-copy="craft">The details</h2>
-        <p id="process" hidden></p>
-      </div>
-      <div class="detail-strip" id="details" tabindex="0" role="region" data-label="detailRegion"></div>
-    </section>
-    <section class="about-section" id="about" aria-labelledby="about-title">
-      <div class="shell about-inner">
-        <div id="portrait" class="portrait"></div>
-        <div>
-          <h2 id="about-title" data-copy="about">About Panah Khamesi</h2>
-          <p id="bio" hidden></p>
-          <p id="location" hidden></p>
+    </section><section class="room" id="room-starry-night" style="--day-room:#d0dce6;--day-ink:#1b293a;--day-accent:#344d69;--night-room:#222c3b;--night-ink:#eaf0f7;--night-accent:#f1ca7d" aria-labelledby="title-starry-night">
+      <div class="wrap room-layout">
+        <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
+          <div class="room-frame"><picture><source type="image/webp" srcset="assets/img/photo-30-480.webp 480w, assets/img/photo-30-960.webp 960w, assets/img/photo-30-1024.webp 1024w" sizes="(min-width: 900px) 480px, 85vw">
+    <img src="assets/img/photo-30-480.jpg" srcset="assets/img/photo-30-480.jpg 480w, assets/img/photo-30-960.jpg 960w, assets/img/photo-30-1024.jpg 1024w" sizes="(min-width: 900px) 480px, 85vw" width="1024" height="1280"
+      alt="Front view of a figure in a green sweater vest raising Starry Night and a For Sale tag above a grassy round base" loading="lazy" decoding="async" draggable="false"></picture></div>
+        </div></div>
+        <div class="wall">
+          <p class="eyebrow room-kicker"><span>Room 02</span><span>Cat. 02</span></p>
+          <h2 id="title-starry-night">Starry Night</h2>
+          <p class="annotation"><svg viewBox="0 0 72 30" aria-hidden="true"><path pathLength="1" d="M2 24Q30 32 67 5M51 7l17-4-8 16"/></svg><span>One night sky, held aloft.</span></p>
+          
+          
+          <a class="button room-enter" data-exhibit="starry-night" data-cursor="viewCursor" href="#exhibit-starry-night">Enter the exhibit <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </section>
-    <section class="shell contact-section" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title" data-copy="contact">Commission a piece</h2>
-      <ol id="steps" hidden></ol>
-      <div class="actions contact-actions" id="contact-links"></div>
-      <p id="contact-placeholder" data-copy="contactPending">Contact details coming soon.</p>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="shell"><small>© 2026 Panah Khamesi · Dayereh Rangi</small></div></footer>
-  <dialog id="lightbox" aria-labelledby="lightbox-title">
-    <div class="dialog-panel">
-      <div class="dialog-header">
-        <h2 id="lightbox-title"></h2>
-        <button class="icon-button" id="close" type="button" data-label="close" aria-label="Close gallery" autofocus>×</button>
+      <div class="wrap room-views" id="exhibit-starry-night">
+        <details open><summary>All exhibit photographs</summary>
+          <div class="static-photos"><figure><picture><source type="image/webp" srcset="assets/img/photo-30-480.webp 480w, assets/img/photo-30-960.webp 960w, assets/img/photo-30-1024.webp 1024w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-30-480.jpg" srcset="assets/img/photo-30-480.jpg 480w, assets/img/photo-30-960.jpg 960w, assets/img/photo-30-1024.jpg 1024w" sizes="(min-width: 900px) 230px, 44vw" width="1024" height="1280"
+      alt="Front view of a figure in a green sweater vest raising Starry Night and a For Sale tag above a grassy round base" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Front</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-31-480.webp 480w, assets/img/photo-31-960.webp 960w, assets/img/photo-31-1025.webp 1025w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-31-480.jpg" srcset="assets/img/photo-31-480.jpg 480w, assets/img/photo-31-960.jpg 960w, assets/img/photo-31-1025.jpg 1025w" sizes="(min-width: 900px) 230px, 44vw" width="1025" height="1280"
+      alt="Angled view of a green-vested figure raising a miniature Starry Night painting with a For Sale tag" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Side</figcaption></figure></div>
+        </details>
       </div>
-      <div id="slide"></div>
-      <div class="dialog-controls">
-        <button class="icon-button" id="previous" type="button" data-label="previous" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
-        <span id="count" aria-live="polite" aria-atomic="true"></span>
-        <button class="icon-button" id="next" type="button" data-label="next" aria-label="Next photo"><span aria-hidden="true">→</span></button>
+    </section><section class="room" id="room-sunflowers" style="--day-room:#ebd8ae;--day-ink:#302620;--day-accent:#5e4122;--night-room:#352e24;--night-ink:#fff0d0;--night-accent:#edc47a" aria-labelledby="title-sunflowers">
+      <div class="wrap room-layout">
+        <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
+          <div class="room-frame"><picture><source type="image/webp" srcset="assets/img/photo-1-480.webp 480w, assets/img/photo-1-960.webp 960w, assets/img/photo-1-1025.webp 1025w" sizes="(min-width: 900px) 480px, 85vw">
+    <img src="assets/img/photo-1-480.jpg" srcset="assets/img/photo-1-480.jpg 480w, assets/img/photo-1-960.jpg 960w, assets/img/photo-1-1025.jpg 1025w" sizes="(min-width: 900px) 480px, 85vw" width="1025" height="1280"
+      alt="Front close-up of a figure in a blue sweater and burgundy overalls holding a miniature Sunflowers canvas" loading="lazy" decoding="async" draggable="false"></picture></div>
+        </div></div>
+        <div class="wall">
+          <p class="eyebrow room-kicker"><span>Room 03</span><span>Cat. 03</span></p>
+          <h2 id="title-sunflowers">Sunflowers</h2>
+          <p class="annotation"><svg viewBox="0 0 72 30" aria-hidden="true"><path pathLength="1" d="M2 24Q30 32 67 5M51 7l17-4-8 16"/></svg><span>Sunflowers, for a very small wall.</span></p>
+          
+          
+          <a class="button room-enter" data-exhibit="sunflowers" data-cursor="viewCursor" href="#exhibit-sunflowers">Enter the exhibit <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-    </div>
-  </dialog>
+      <div class="wrap room-views" id="exhibit-sunflowers">
+        <details open><summary>All exhibit photographs</summary>
+          <div class="static-photos"><figure><picture><source type="image/webp" srcset="assets/img/photo-1-480.webp 480w, assets/img/photo-1-960.webp 960w, assets/img/photo-1-1025.webp 1025w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-1-480.jpg" srcset="assets/img/photo-1-480.jpg 480w, assets/img/photo-1-960.jpg 960w, assets/img/photo-1-1025.jpg 1025w" sizes="(min-width: 900px) 230px, 44vw" width="1025" height="1280"
+      alt="Front close-up of a figure in a blue sweater and burgundy overalls holding a miniature Sunflowers canvas" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Front</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-24-480.webp 480w, assets/img/photo-24-960.webp 960w, assets/img/photo-24-1024.webp 1024w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-24-480.jpg" srcset="assets/img/photo-24-480.jpg 480w, assets/img/photo-24-960.jpg 960w, assets/img/photo-24-1024.jpg 1024w" sizes="(min-width: 900px) 230px, 44vw" width="1024" height="1280"
+      alt="Angled detail of the miniature Sunflowers canvas held against a blue sweater and burgundy overalls" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Detail</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-22-480.webp 480w, assets/img/photo-22-960.webp 960w, assets/img/photo-22-1025.webp 1025w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-22-480.jpg" srcset="assets/img/photo-22-480.jpg 480w, assets/img/photo-22-960.jpg 960w, assets/img/photo-22-1025.jpg 1025w" sizes="(min-width: 900px) 230px, 44vw" width="1025" height="1280"
+      alt="Flower-crowned figure holding a Van Gogh self-portrait beside a figure in burgundy overalls holding Sunflowers" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Pair</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-23-480.webp 480w, assets/img/photo-23-960.webp 960w, assets/img/photo-23-1024.webp 1024w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-23-480.jpg" srcset="assets/img/photo-23-480.jpg 480w, assets/img/photo-23-960.jpg 960w, assets/img/photo-23-1024.jpg 1024w" sizes="(min-width: 900px) 230px, 44vw" width="1024" height="1280"
+      alt="Flower-crowned and sunflowers figures holding tiny paintings beside a third figurine in a striped jacket" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Group</figcaption></figure></div>
+        </details>
+      </div>
+    </section><section class="room" id="room-flower-crown" style="--day-room:#d5ded2;--day-ink:#243224;--day-accent:#435b44;--night-room:#27342d;--night-ink:#e9f4e5;--night-accent:#c3d7b6" aria-labelledby="title-flower-crown">
+      <div class="wrap room-layout">
+        <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
+          <div class="room-frame"><picture><source type="image/webp" srcset="assets/img/photo-22-480.webp 480w, assets/img/photo-22-960.webp 960w, assets/img/photo-22-1025.webp 1025w" sizes="(min-width: 900px) 480px, 85vw">
+    <img src="assets/img/photo-22-480.jpg" srcset="assets/img/photo-22-480.jpg 480w, assets/img/photo-22-960.jpg 960w, assets/img/photo-22-1025.jpg 1025w" sizes="(min-width: 900px) 480px, 85vw" width="1025" height="1280"
+      alt="Flower-crowned figure holding a Van Gogh self-portrait beside a figure in burgundy overalls holding Sunflowers" loading="lazy" decoding="async" draggable="false"></picture></div>
+        </div></div>
+        <div class="wall">
+          <p class="eyebrow room-kicker"><span>Room 04</span><span>Cat. 04</span></p>
+          <h2 id="title-flower-crown">The flower crown</h2>
+          <p class="annotation"><svg viewBox="0 0 72 30" aria-hidden="true"><path pathLength="1" d="M2 24Q30 32 67 5M51 7l17-4-8 16"/></svg><span>A portrait in another painter’s hands.</span></p>
+          
+          
+          <a class="button room-enter" data-exhibit="flower-crown" data-cursor="viewCursor" href="#exhibit-flower-crown">Enter the exhibit <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="wrap room-views" id="exhibit-flower-crown">
+        <details open><summary>All exhibit photographs</summary>
+          <div class="static-photos"><figure><picture><source type="image/webp" srcset="assets/img/photo-22-480.webp 480w, assets/img/photo-22-960.webp 960w, assets/img/photo-22-1025.webp 1025w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-22-480.jpg" srcset="assets/img/photo-22-480.jpg 480w, assets/img/photo-22-960.jpg 960w, assets/img/photo-22-1025.jpg 1025w" sizes="(min-width: 900px) 230px, 44vw" width="1025" height="1280"
+      alt="Flower-crowned figure holding a Van Gogh self-portrait beside a figure in burgundy overalls holding Sunflowers" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Pair</figcaption></figure><figure><picture><source type="image/webp" srcset="assets/img/photo-23-480.webp 480w, assets/img/photo-23-960.webp 960w, assets/img/photo-23-1024.webp 1024w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-23-480.jpg" srcset="assets/img/photo-23-480.jpg 480w, assets/img/photo-23-960.jpg 960w, assets/img/photo-23-1024.jpg 1024w" sizes="(min-width: 900px) 230px, 44vw" width="1024" height="1280"
+      alt="Flower-crowned and sunflowers figures holding tiny paintings beside a third figurine in a striped jacket" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Group</figcaption></figure></div>
+        </details>
+      </div>
+    </section><section class="room" id="room-tuxedo-bust" style="--day-room:#d8d4d1;--day-ink:#2a2423;--day-accent:#58424b;--night-room:#312d31;--night-ink:#f7edf2;--night-accent:#dabdca" aria-labelledby="title-tuxedo-bust">
+      <div class="wrap room-layout">
+        <div class="room-photo"><i class="painted-arch" aria-hidden="true"></i><div class="pedestal">
+          <div class="room-frame"><picture><source type="image/webp" srcset="assets/img/photo-25-480.webp 480w, assets/img/photo-25-853.webp 853w" sizes="(min-width: 900px) 480px, 85vw">
+    <img src="assets/img/photo-25-480.jpg" srcset="assets/img/photo-25-480.jpg 480w, assets/img/photo-25-853.jpg 853w" sizes="(min-width: 900px) 480px, 85vw" width="853" height="1280"
+      alt="Small mustached bust in a dark tuxedo, white shirt and black bow tie" loading="lazy" decoding="async" draggable="false"></picture></div>
+        </div></div>
+        <div class="wall">
+          <p class="eyebrow room-kicker"><span>Room 05</span><span>Cat. 05</span></p>
+          <h2 id="title-tuxedo-bust">Tuxedo bust</h2>
+          <p class="annotation"><svg viewBox="0 0 72 30" aria-hidden="true"><path pathLength="1" d="M2 24Q30 32 67 5M51 7l17-4-8 16"/></svg><span>The bow tie is quite serious.</span></p>
+          
+          
+          <a class="button room-enter" data-exhibit="tuxedo-bust" data-cursor="viewCursor" href="#exhibit-tuxedo-bust">Enter the exhibit <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="wrap room-views" id="exhibit-tuxedo-bust">
+        <details open><summary>All exhibit photographs</summary>
+          <div class="static-photos"><figure><picture><source type="image/webp" srcset="assets/img/photo-25-480.webp 480w, assets/img/photo-25-853.webp 853w" sizes="(min-width: 900px) 230px, 44vw">
+    <img src="assets/img/photo-25-480.jpg" srcset="assets/img/photo-25-480.jpg 480w, assets/img/photo-25-853.jpg 853w" sizes="(min-width: 900px) 230px, 44vw" width="853" height="1280"
+      alt="Small mustached bust in a dark tuxedo, white shirt and black bow tie" loading="lazy" decoding="async" draggable="false"></picture><figcaption>Front</figcaption></figure></div>
+        </details>
+      </div>
+    </section></div>
+      
+      
+    </main>
+    <footer class="footer"><div class="wrap footer-row"><div><p>Please do not touch (but do ask to buy).</p><small>© 2026 Panah Khamesi · Dayereh Rangi</small></div>
+      <div class="footer-actions"><a href="#entrance">Back to entrance</a><button class="lighting" id="footer-theme" type="button" hidden></button>
+      </div>
+    </div></footer>
+    <dialog id="exhibit" aria-labelledby="exhibit-title">
+      <div class="exhibit-inner"><header class="exhibit-head"><p class="eyebrow" id="exhibit-catalogue"></p><button type="button" id="leave" class="button" autofocus>Leave exhibit <span aria-hidden="true">×</span></button></header>
+      <div class="exhibit-layout"><div class="viewer"><div id="angle-photo" tabindex="0" role="region" aria-label="All exhibit photographs" data-cursor="dragCursor"></div><div class="angle-controls">
+      <button id="angle-prev" class="button iconic" type="button" aria-label="Previous photograph">←</button><p id="angle-status" aria-live="polite"></p><button id="angle-next" class="button iconic" type="button" aria-label="Next photograph">→</button></div></div>
+      <div class="exhibit-label"><h2 id="exhibit-title"></h2><p id="exhibit-annotation"></p><div id="exhibit-facts"></div><div id="angle-thumbs"></div>
+      <div class="exhibit-pagination"><button class="button" id="exhibit-prev" type="button">Previous exhibit</button><button class="button" id="exhibit-next" type="button">Next exhibit</button></div>
+      </div></div></div>
+    </dialog>
+    <nav class="wheel" id="wheel" aria-label="Room map" hidden><div class="wheel-dial"><svg viewBox="0 0 100 100" aria-label="Room map"></svg><span id="wheel-number" aria-hidden="true"></span></div><p id="wheel-status"></p></nav>
+    <div id="doors" hidden><div class="door door-start"></div><div class="door door-end"></div><div class="door-copy"><p class="eyebrow">Dayereh Rangi</p><p id="door-progress" aria-live="polite">Hanging the exhibits 00%</p><button id="door-skip" class="button" type="button">Skip the doors</button></div></div>
+  </div>
 </body>
 </html>

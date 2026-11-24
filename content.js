@@ -140,3 +140,4 @@ window.portfolioContent = {
     roomArrow: "↓", folio: "Museum catalogue", handMade: "Hand-sculpted & hand-painted"
   });
 }
+window.portfolioContent.strings.en.heroBy = "by {name}";
