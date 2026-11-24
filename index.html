@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dayereh Rangi | Hand-painted figurines by Panah Khamesi</title>
+  <meta name="author" content="Panah Khamesi">
+  <meta name="description" content="Explore Dayereh Rangi, the portfolio of Panah Khamesi’s hand-sculpted, hand-painted desk figurines.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dayereh Rangi | Hand-painted figurines by Panah Khamesi">
+  <meta property="og:description" content="Explore hand-sculpted, hand-painted desk figurines by Panah Khamesi.">
+  <meta property="og:image" content="assets/img/social.jpg">
+  <meta property="og:image:alt" content="Dalí-inspired figure holding a melting clock">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dayereh Rangi | Hand-painted figurines by Panah Khamesi">
+  <meta name="twitter:description" content="Explore hand-sculpted, hand-painted desk figurines by Panah Khamesi.">
+  <meta name="twitter:image" content="assets/img/social.jpg">
+  <meta name="twitter:image:alt" content="Dalí-inspired figure holding a melting clock">
+  <meta name="theme-color" content="#f7f3ec">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script id="artist-schema" type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Panah Khamesi"}</script>
+  <script defer src="content.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-copy="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top"><span data-brand>Dayereh Rangi</span><small data-by>by Panah Khamesi</small></a>
+      <nav aria-label="Main navigation" data-label="nav">
+        <a href="#work" data-copy="navWork">Work</a>
+        <a href="#about" data-copy="navAbout">About</a>
+        <a class="nav-contact" href="#contact" data-copy="navContact">Contact</a>
+        <button id="locale" type="button" hidden></button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-copy="medium">Hand-sculpted · Hand-painted</p>
+        <h1 id="hero-title" data-brand>Dayereh Rangi</h1>
+        <p class="hero-by" data-by>by Panah Khamesi</p>
+        <p class="hero-intro" id="tagline" hidden></p>
+        <div class="actions">
+          <a class="button primary" href="#work" data-copy="view">View the work</a>
+          <a class="button secondary" href="#contact" data-copy="commission">Commission a piece</a>
+        </div>
+      </div>
+      <figure class="hero-frame">
+        <picture>
+          <source type="image/webp" srcset="assets/img/photo-3-480.webp 480w, assets/img/photo-3-853.webp 853w" sizes="(min-width: 1280px) 522px, (min-width: 700px) 43vw, 92vw">
+          <img src="assets/img/photo-3-480.jpg" srcset="assets/img/photo-3-480.jpg 480w, assets/img/photo-3-853.jpg 853w" sizes="(min-width: 1280px) 522px, (min-width: 700px) 43vw, 92vw" width="853" height="1280" fetchpriority="high" alt="Front view of a Dalí-inspired figurine holding a melting clock, in a burgundy striped jacket and leopard-print shorts">
+        </picture>
+        <figcaption data-copy="heroCaption">The melting clock</figcaption>
+      </figure>
+    </section>
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-head">
+          <h2 id="work-title" data-copy="work">Selected Work</h2>
+          <p data-copy="workIntro">Famous artists reimagined as everyday people, with tiny painted canvases and a few playful details.</p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <div class="other-work"><h3 data-copy="other">Other work</h3><div id="other"></div></div>
+      </div>
+    </section>
+    <section class="craft-section shell" id="craft" aria-labelledby="craft-title">
+      <div class="section-head">
+        <h2 id="craft-title" data-copy="craft">The details</h2>
+        <p id="process" hidden></p>
+      </div>
+      <div class="detail-strip" id="details" tabindex="0" role="region" data-label="detailRegion"></div>
+    </section>
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="shell about-inner">
+        <div id="portrait" class="portrait"></div>
+        <div>
+          <h2 id="about-title" data-copy="about">About Panah Khamesi</h2>
+          <p id="bio" hidden></p>
+          <p id="location" hidden></p>
+        </div>
+      </div>
+    </section>
+    <section class="shell contact-section" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" data-copy="contact">Commission a piece</h2>
+      <ol id="steps" hidden></ol>
+      <div class="actions contact-actions" id="contact-links"></div>
+      <p id="contact-placeholder" data-copy="contactPending">Contact details coming soon.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell"><small>© 2026 Panah Khamesi · Dayereh Rangi</small></div></footer>
+  <dialog id="lightbox" aria-labelledby="lightbox-title">
+    <div class="dialog-panel">
+      <div class="dialog-header">
+        <h2 id="lightbox-title"></h2>
+        <button class="icon-button" id="close" type="button" data-label="close" aria-label="Close gallery" autofocus>×</button>
+      </div>
+      <div id="slide"></div>
+      <div class="dialog-controls">
+        <button class="icon-button" id="previous" type="button" data-label="previous" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
+        <span id="count" aria-live="polite" aria-atomic="true"></span>
+        <button class="icon-button" id="next" type="button" data-label="next" aria-label="Next photo"><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
