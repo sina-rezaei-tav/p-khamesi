@@ -75,6 +75,7 @@ export function museum(content, lang, extras = "") {
       </div>
     </section>`;
   }).join("");
+  const instagram = /^https?:\/\//i.test(content.instagram) ? content.instagram : "";
   const portrait = content.portrait;
   const about = translated.bio || content.bio || portrait.src || content.location || content.brandMeaning;
   return `<div class="museum" data-version="${fingerprint(content)}">
@@ -108,7 +109,8 @@ export function museum(content, lang, extras = "") {
       ${portrait.src ? `<img src="${escape(portrait.src)}" alt="${escape(translated.portraitAlt || portrait.alt)}" width="${escape(portrait.width)}" height="${escape(portrait.height)}" loading="lazy">` : ""}</section>` : ""}
     </main>
     <footer class="footer"><div class="wrap footer-row"><div><p>${f("footer")}</p><small>${f("copyright")}</small></div>
-      <div class="footer-actions"><a href="#entrance">${f("up")}</a><button class="lighting" id="footer-theme" type="button" hidden></button>
+      <div class="footer-actions">
+      ${instagram ? `<a href="${escape(instagram)}">${f("instagram")}</a>` : ""}<a href="#entrance">${f("up")}</a><button class="lighting" id="footer-theme" type="button" hidden></button>
       ${content.strings.fa ? `<a id="language" lang="${lang === "en" ? "fa" : "en"}" href="?lang=${lang === "en" ? "fa" : "en"}">${escape(content.strings[lang === "en" ? "fa" : "en"].languageName)}</a>` : ""}</div>
     </div></footer>
     <dialog id="exhibit" aria-labelledby="exhibit-title">

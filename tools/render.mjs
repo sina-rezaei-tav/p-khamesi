@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { runInNewContext } from "node:vm";
 import { museum, escape } from "../js/markup.mjs";
+import { extras } from "../js/extras.mjs";
 const root = new URL("../", import.meta.url);
 const get = (name) => readFile(new URL(name, root), "utf8");
 const window = {};
@@ -15,4 +16,4 @@ const instagram = /^https?:\/\//i.test(content.instagram) ? content.instagram : 
 const person = { "@context": "https://schema.org", "@type": "Person", name: content.artist, ...(instagram ? { sameAs: [instagram] } : {}) };
 const head = oldHead.replace(/(content=")[^"]*assets\/img\/social\.jpg"/g, `$1${escape(url("assets/img/social.jpg"))}"`)
   .replace(/(<script id="artist-schema" type="application\/ld\+json">)[\s\S]*?(<\/script>)/, (_, start, end) => start + JSON.stringify(person).replace(/</g, "\\u003c") + end);
-await writeFile(new URL("index.html", root), `${head}</head>\n<body>\n${museum(content, "en")}\n</body>\n</html>\n`);
+await writeFile(new URL("index.html", root), `${head}</head>\n<body>\n${museum(content, "en", extras(content, "en"))}\n</body>\n</html>\n`);
